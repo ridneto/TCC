@@ -1,0 +1,476 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9464AD7D-9BB0-4491-A38A-998C3122EA77}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TCC_CAVALCENT</RootNamespace>
+    <AssemblyName>TCC_CAVALCENT</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BD\DB_TCCDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_TCCDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menus\frmTelaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menus\frmTelaPrincipal.Designer.cs">
+      <DependentUpon>frmTelaPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Novo\frmNovoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Novo\frmNovoCliente.Designer.cs">
+      <DependentUpon>frmNovoCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Novo\frmNovoFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Novo\frmNovoFuncionario.Designer.cs">
+      <DependentUpon>frmNovoFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Novo\frmNovoAgendamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Novo\frmNovoAgendamento.Designer.cs">
+      <DependentUpon>frmNovoAgendamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pesquisas\frmPesquisaFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pesquisas\frmPesquisaFuncionario.Designer.cs">
+      <DependentUpon>frmPesquisaFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pesquisas\Pesquisas do Agendamento\frmPesquisaClienteAG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pesquisas\Pesquisas do Agendamento\frmPesquisaClienteAG.Designer.cs">
+      <DependentUpon>frmPesquisaClienteAG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pesquisas\Pesquisas do Agendamento\frmPesquisaTatuagemAG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pesquisas\Pesquisas do Agendamento\frmPesquisaTatuagemAG.Designer.cs">
+      <DependentUpon>frmPesquisaTatuagemAG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menus\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menus\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Relatório\frmEscolhaRelatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Relatório\frmEscolhaRelatorio.Designer.cs">
+      <DependentUpon>frmEscolhaRelatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menus\frmGerarBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menus\frmGerarBackup.Designer.cs">
+      <DependentUpon>frmGerarBackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pesquisas\frmPesquisaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pesquisas\frmPesquisaCliente.Designer.cs">
+      <DependentUpon>frmPesquisaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pesquisas\frmPesquisaAgendamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pesquisas\frmPesquisaAgendamento.Designer.cs">
+      <DependentUpon>frmPesquisaAgendamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pesquisas\frmPesquisaTatuagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pesquisas\frmPesquisaTatuagem.Designer.cs">
+      <DependentUpon>frmPesquisaTatuagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Novo\frmNovoTatuagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Novo\frmNovoTatuagem.Designer.cs">
+      <DependentUpon>frmNovoTatuagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pesquisas\frmPesquisaClienteOT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pesquisas\frmPesquisaClienteOT.Designer.cs">
+      <DependentUpon>frmPesquisaClienteOT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Novo\frmNovoTipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Novo\frmNovoTipo.Designer.cs">
+      <DependentUpon>frmNovoTipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pesquisas\frmPesquisaTipoTatuagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pesquisas\frmPesquisaTipoTatuagem.Designer.cs">
+      <DependentUpon>frmPesquisaTipoTatuagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menus\frmConfirmaSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menus\frmConfirmaSenha.Designer.cs">
+      <DependentUpon>frmConfirmaSenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menus\frmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menus\frmSplash.Designer.cs">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Relatório\frmRelatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Relatório\frmRelatorio.Designer.cs">
+      <DependentUpon>frmRelatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Classe\TAB_FUNC.cs" />
+    <Compile Include="Classe\Util.cs" />
+    <EmbeddedResource Include="Forms\Menus\frmConfirmaSenha.resx">
+      <DependentUpon>frmConfirmaSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menus\frmSplash.resx">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menus\frmTelaPrincipal.resx">
+      <DependentUpon>frmTelaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Novo\frmNovoCliente.resx">
+      <DependentUpon>frmNovoCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Novo\frmNovoFuncionario.resx">
+      <DependentUpon>frmNovoFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Novo\frmNovoAgendamento.resx">
+      <DependentUpon>frmNovoAgendamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Novo\frmNovoTipo.resx">
+      <DependentUpon>frmNovoTipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pesquisas\frmPesquisaClienteOT.resx">
+      <DependentUpon>frmPesquisaClienteOT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pesquisas\frmPesquisaFuncionario.resx">
+      <DependentUpon>frmPesquisaFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pesquisas\frmPesquisaTatuagem.resx">
+      <DependentUpon>frmPesquisaTatuagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pesquisas\Pesquisas do Agendamento\frmPesquisaClienteAG.resx">
+      <DependentUpon>frmPesquisaClienteAG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pesquisas\Pesquisas do Agendamento\frmPesquisaTatuagemAG.resx">
+      <DependentUpon>frmPesquisaTatuagemAG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menus\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Relatório\frmEscolhaRelatorio.resx">
+      <DependentUpon>frmEscolhaRelatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menus\frmGerarBackup.resx">
+      <DependentUpon>frmGerarBackup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pesquisas\frmPesquisaCliente.resx">
+      <DependentUpon>frmPesquisaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pesquisas\frmPesquisaAgendamento.resx">
+      <DependentUpon>frmPesquisaAgendamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Novo\frmNovoTatuagem.resx">
+      <DependentUpon>frmNovoTatuagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pesquisas\frmPesquisaTipoTatuagem.resx">
+      <DependentUpon>frmPesquisaTipoTatuagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Relatório\frmRelatorio.resx">
+      <DependentUpon>frmRelatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Relatório\Relatorio.rdlc" />
+    <None Include="BD\app.config" />
+    <None Include="BD\DB_TCCDataSet.xsc">
+      <DependentUpon>DB_TCCDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BD\DB_TCCDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_TCCDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BD\DB_TCCDataSet.xss">
+      <DependentUpon>DB_TCCDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu novo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\novo cliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Novo Funcionario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Novo Tipo Tatuagem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\novo tatuagem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\novo agendamento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu pesquisar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pesquisar cliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pesquisar funcionario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pesquisar Tipo Tatuagem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pesquisar tatuagem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pesquisar Agendamento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu Mudar Usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu Sair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ferramentos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calculadora.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG Tela Principal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela Principal Confirmar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela Principal Excluir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG Tela Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login txtbox user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login txtbox senha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login button Entrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Confirmar Senha PictureBox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG Tela Geral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Confirmar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Backup Button Backup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Backup Button Restaurar Backup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu Relatorio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu Relatorio Gerar Relatorio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Alterar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Cancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Procurar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Procurar [certo].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Adicionar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Limpar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Excluir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button voltar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1414450750_graph.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Checar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chec.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bloco de  notes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu Button Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CONFIRMAR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LIMPAR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EXCLUIR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CANCELAR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ALTERAR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HOME.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RELATORIO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1417123007_editor_trash_delete_recycle_bin_-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excluirpreto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excluirpreto1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excluirpreto2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excluirpreto3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excluirpreto4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tela login cópia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tela principal cópia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundo geral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
+      <Project>{4583DE0A-9A99-44E6-AF9C-EABE4075E653}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ModelLayer\ModelLayer.csproj">
+      <Project>{1ABC6306-6FDF-4C7D-9B59-9470351C9094}</Project>
+      <Name>ModelLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Restore\Restore.csproj">
+      <Project>{2254D986-E5E0-4DC8-9D7A-EC8F14A268CB}</Project>
+      <Name>Restore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
